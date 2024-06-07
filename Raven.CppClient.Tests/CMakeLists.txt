@@ -33,6 +33,8 @@ find_package(CURL REQUIRED)
 find_package(Threads REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 
+find_library(CURL_LIBRARIES curl)
+
 message("CLIENT_DIR: ${CLIENT_DIR}")
 
 target_include_directories(Raven_CppClient_Tests PRIVATE	
@@ -46,6 +48,7 @@ target_include_directories(Raven_CppClient_Tests PRIVATE
 target_link_libraries(Raven_CppClient_Tests PRIVATE 
     GTest::gtest 
     GTest::gtest_main 
+    xxhash 
     Raven_CppClient 
     OpenSSL::SSL 
     OpenSSL::Crypto 

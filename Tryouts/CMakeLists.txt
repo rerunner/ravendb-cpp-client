@@ -39,4 +39,6 @@ find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)
 find_package(Threads REQUIRED)
 
-target_link_libraries(Raven_CppClient_Tryouts ZLIB::ZLIB nlohmann_json nlohmann_json::nlohmann_json OpenSSL::SSL OpenSSL::Crypto ${CURL_LIBRARIES} Threads::Threads)
+find_library(CURL_LIBRARIES curl)
+
+target_link_libraries(Raven_CppClient_Tryouts ZLIB::ZLIB nlohmann_json nlohmann_json::nlohmann_json xxhash OpenSSL::SSL OpenSSL::Crypto ${CURL_LIBRARIES} Threads::Threads)

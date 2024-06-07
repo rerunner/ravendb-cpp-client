@@ -19,7 +19,7 @@ endif()
 
 include(cmake/vcpkg_config.cmake)
 include(cmake/xxHash.cmake)
-list(APPEND CMAKE_INCLUDE_PATH "${xxhash_cpp_SOURCE_DIR}")
+list(APPEND CMAKE_INCLUDE_PATH "${xxhash_cpp_SOURCE_DIR}" /usr/local/include/nlohmann/)
 link_directories(${xxhash_cpp_SOURCE_DIR})
 
 if(PPC)

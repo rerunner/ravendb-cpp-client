@@ -6,7 +6,8 @@
 #pragma once
 
 #include "targetver.h"
-#include "json.hpp"
+//#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "xxhash.h"
 #include "nlohmann/json.hpp"
 #include "xxhash.h"
